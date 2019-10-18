@@ -1,0 +1,32 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url){
+    @font-face{
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        src: url($f-url) format('woff2');
+    }
+    
+}
+	
+
+@include font('MPLUS1p', normal, 400, '../fonts/_src/MPLUS1p-Regular.ttf');
+@include font('MPLUS1p-medium', normal, 500, '../fonts/_src/MPLUS1p-Medium.ttf');
+@include font('MPLUS1p-bold', normal, 700, '../fonts/_src/MPLUS1p-Bold.ttf');
+@include font('MPLUS1p-black', normal, 800, '../fonts/_src/MPLUS1p-Black.ttf');
+@include font('Noticia', normal, 400, '../fonts/_src/NoticiaText-Regular.ttf');
+@include font('Noticia-italic', italic, 400, '../fonts/_src/NoticiaText-Italic.ttf');
+
+
+
